@@ -12,9 +12,9 @@ function App() {
         try {
             const response = await api.get("/api/v1/movies");
             const jsonData = await response.data;
-
-            console.log(jsonData);
             setMovies(jsonData);
+            console.log(jsonData);
+            console.log("This is working");
         } catch (error) {
             console.log(error);
         }
@@ -34,7 +34,7 @@ function App() {
                 >
                     <Route
                         path="/"
-                        element={<Home />}
+                        element={<Home movies={movies} />}
                     ></Route>
                 </Route>
             </Routes>
