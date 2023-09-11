@@ -6,7 +6,7 @@ import Layout from "./components/Layout";
 import Home from "./components/home/Home";
 
 function App() {
-    const [movies, setMovies] = useState();
+    const [movies, setMovies] = useState([]);
 
     const getMovies = async () => {
         try {
