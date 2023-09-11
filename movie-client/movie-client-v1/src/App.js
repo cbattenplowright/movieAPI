@@ -27,6 +27,7 @@ function App() {
     return (
         <div className="App">
             <Routes>
+              {/* when path is / will display Layout and Home routes */}
                 <Route
                     path="/"
                     element={<Layout />}
