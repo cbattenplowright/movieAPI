@@ -1,7 +1,8 @@
 import "./App.css";
 import api from "./API/axiosConfig";
 import { useState, useEffect } from "react";
-import { json } from "react-router-dom";
+import Layout from "./components/Layout";
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
     const [movies, setMovies] = useState();
@@ -22,7 +23,15 @@ function App() {
         getMovies();
     }, []);
 
-    return <div className="App"></div>;
+    return (
+        <div className="App">
+            <Routes>
+              <Route path="/" element={Layout}>
+                
+              </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
