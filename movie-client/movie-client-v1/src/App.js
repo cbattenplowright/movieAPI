@@ -9,7 +9,7 @@ function App() {
     const getMovies = async () => {
         try {
             const response = await api.get("/api/v1/movies");
-            const jsonData = await response.json();
+            const jsonData = await response.data;
 
             console.log(jsonData);
             setMovies(jsonData);
